@@ -2,37 +2,34 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="398.0" prefWidth="49.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.example.calculator.HelloController">
+<VBox alignment="CENTER" prefHeight="360.0" prefWidth="280.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.CalculatorController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="241.0">
+   <Pane prefHeight="310.0" prefWidth="250.0">
       <children>
-         <Button contentDisplay="CENTER" layoutX="10.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="0" />
-         <Button contentDisplay="CENTER" layoutX="70.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="." />
-         <Button contentDisplay="CENTER" layoutX="130.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="=" />
-         <Button contentDisplay="CENTER" layoutX="190.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="+" />
-         <Button contentDisplay="CENTER" layoutX="10.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="1" />
-         <Button contentDisplay="CENTER" layoutX="70.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="2" />
-         <Button contentDisplay="CENTER" layoutX="130.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="3" />
-         <Button contentDisplay="CENTER" layoutX="190.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="-" />
-         <Button contentDisplay="CENTER" layoutX="10.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="4" />
-         <Button contentDisplay="CENTER" layoutX="70.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="5" />
-         <Button contentDisplay="CENTER" layoutX="130.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="6" />
-         <Button contentDisplay="CENTER" layoutX="190.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="*" />
-         <Button contentDisplay="CENTER" layoutX="10.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="7" />
-         <Button contentDisplay="CENTER" layoutX="70.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="8" />
-         <Button contentDisplay="CENTER" layoutX="130.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="9" />
-         <Button contentDisplay="CENTER" layoutX="190.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="/" />
-         <Button contentDisplay="CENTER" layoutX="190.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" text="AC" />
-         <TextField layoutX="7.0" layoutY="30.0" prefHeight="50.0" prefWidth="178.0" />
+         <Button fx:id="zero" contentDisplay="CENTER" layoutX="10.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="0" />
+         <Button fx:id="dot" contentDisplay="CENTER" layoutX="70.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onOperationButtonClick" prefHeight="50.0" prefWidth="50.0" text="." />
+         <Button fx:id="calculate" contentDisplay="CENTER" layoutX="130.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onCalculateButtonClick" prefHeight="50.0" prefWidth="50.0" text="=" />
+         <Button fx:id="plus" contentDisplay="CENTER" layoutX="190.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onOperationButtonClick" prefHeight="50.0" prefWidth="50.0" text="+" />
+         <Button fx:id="one" contentDisplay="CENTER" layoutX="10.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="1" />
+         <Button fx:id="two" contentDisplay="CENTER" layoutX="70.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="2" />
+         <Button fx:id="three" contentDisplay="CENTER" layoutX="130.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="3" />
+         <Button fx:id="minus" contentDisplay="CENTER" layoutX="190.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onOperationButtonClick" prefHeight="50.0" prefWidth="50.0" text="-" />
+         <Button contentDisplay="CENTER" layoutX="10.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="4" />
+         <Button contentDisplay="CENTER" layoutX="70.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="5" />
+         <Button contentDisplay="CENTER" layoutX="130.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="6" />
+         <Button fx:id="multe" contentDisplay="CENTER" layoutX="190.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onOperationButtonClick" prefHeight="50.0" prefWidth="50.0" text="*" />
+         <Button contentDisplay="CENTER" layoutX="10.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="7" />
+         <Button contentDisplay="CENTER" layoutX="70.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="8" />
+         <Button contentDisplay="CENTER" layoutX="130.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="9" />
+         <Button fx:id="dive" contentDisplay="CENTER" layoutX="190.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onOperationButtonClick" prefHeight="50.0" prefWidth="50.0" text="/" />
+         <Button contentDisplay="CENTER" layoutX="190.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onACButtonClick" prefHeight="50.0" prefWidth="50.0" text="AC" />
+         <TextField fx:id="display" editable="false" layoutX="10.0" layoutY="30.0" prefHeight="50.0" prefWidth="178.0" />
       </children>
-   </AnchorPane>
-
-    <Label fx:id="welcomeText" />
+   </Pane>
 </VBox>
