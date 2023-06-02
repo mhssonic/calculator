@@ -13,7 +13,7 @@
    <Pane prefHeight="310.0" prefWidth="250.0">
       <children>
          <Button fx:id="zero" contentDisplay="CENTER" layoutX="10.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="0" />
-         <Button fx:id="dot" contentDisplay="CENTER" layoutX="70.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onOperationButtonClick" prefHeight="50.0" prefWidth="50.0" text="." />
+         <Button fx:id="dot" contentDisplay="CENTER" layoutX="70.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="." />
          <Button fx:id="calculate" contentDisplay="CENTER" layoutX="130.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onCalculateButtonClick" prefHeight="50.0" prefWidth="50.0" text="=" />
          <Button fx:id="plus" contentDisplay="CENTER" layoutX="190.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onOperationButtonClick" prefHeight="50.0" prefWidth="50.0" text="+" />
          <Button fx:id="one" contentDisplay="CENTER" layoutX="10.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onNumberButtonClick" prefHeight="50.0" prefWidth="50.0" text="1" />

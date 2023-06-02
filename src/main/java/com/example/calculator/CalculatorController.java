@@ -3,10 +3,10 @@ package com.example.calculator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class CalculatorController {
+    private Calculator calculator = new Calculator();
 
     @FXML
     private Button calculate;
@@ -29,23 +29,27 @@ public class CalculatorController {
     @FXML
     protected void onNumberButtonClick(ActionEvent event) {
         Button numButton = ((Button)event.getSource());
-        int number = Integer.parseInt(numButton.getText());
+        if(calculator.isFlagClearForNext())
+            display.setText("");
         display.setText(display.getText() + numButton.getText());
     }
 
     @FXML
     protected void onACButtonClick(){
         display.setText("");
+        calculator.clear();
     }
 
     @FXML
     protected void onOperationButtonClick(ActionEvent event){
-        Button numButton = ((Button)event.getSource());
-        display.setText(display.getText() + numButton.getText());
+        Button opButton = ((Button)event.getSource());
+        if(display.getText().length() == 0)
+            return;
+        display.setText(calculator.handleOperation(display.getText(), opButton.getText()));
     }
 
     @FXML
     protected void onCalculateButtonClick(){
-
+        display.setText(calculator.equalHandler(display.getText()));
     }
 }
