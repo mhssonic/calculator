@@ -15,6 +15,8 @@ public class Main extends Application {
         stage.setTitle("Calculator");
         stage.setScene(scene);
         stage.show();
+        CalculatorController calculatorController = fxmlLoader.getController();
+        scene.setOnKeyPressed(calculatorController::keyBoardHandler);
     }
 
     public static void main(String[] args) {
